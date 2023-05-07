@@ -1,0 +1,12 @@
+@use "./variables" as v;
+
+body {
+  color: v.$txt-primary;
+  background: v.$background;
+  font-family: v.$main-font;
+}
+
+::selection {
+  background-color: v.$primary-color;
+  color: v.$secondary-color;
+}

@@ -1,0 +1,20 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.serversNav {
+  height: 100vh;
+  width: 65px;
+  min-width: 65px;
+  background: v.$navbar;
+  padding-top: 10px;
+  ul {
+    @include m.flex(column, flex-start);
+    gap: 10px;
+    hr {
+      background: v.$activeFriendItem;
+      width: 50%;
+      height: 2px;
+      border: 0;
+    }
+  }
+}

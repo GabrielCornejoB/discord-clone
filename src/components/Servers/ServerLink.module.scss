@@ -1,0 +1,23 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.link {
+  background: v.$background;
+  color: v.$green;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  @include m.flex(column);
+  transition: 0.15s;
+  cursor: pointer;
+  &:hover {
+    border-radius: 15px;
+    background: v.$green;
+    color: v.$txt-primary;
+  }
+  &:first-child {
+    color: white;
+    background: v.$blue;
+    border-radius: 15px;
+  }
+}
