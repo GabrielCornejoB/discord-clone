@@ -1,0 +1,34 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.privateChannelsBar {
+  @include m.flex(column, flex-start);
+  background: v.$friendsBar;
+  height: 100vh;
+  width: v.$private-channels-width;
+  min-width: v.$private-channels-width;
+  // overflow-y: scroll;
+  // &::-webkit-scrollbar {
+  //   width: 5px;
+  // }
+  // &::-webkit-scrollbar-thumb {
+  //   background: v.$scrollbar;
+  // }
+
+  .searchConversation {
+    @include m.flex(column);
+    height: v.$header-height;
+    width: 100%;
+    border-bottom: 1.5px solid v.$searchbar;
+    button {
+      background: v.$searchbar;
+      color: v.$txt-secondary;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      width: 90%;
+      padding: 5px 10px;
+      text-align: left;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.chat {
+  width: 100%;
+  @include m.flex(row, flex-start);
+  gap: 10px;
+  padding: 5px 15px 5px 7.5px;
+  border-radius: 5px;
+  cursor: pointer;
+  span {
+    margin-bottom: 5px;
+    color: v.$txt-secondary;
+  }
+  .pfp {
+    background: coral;
+    width: 34px;
+    height: 34px;
+    @include m.flex(row);
+    border-radius: 100%;
+  }
+  &:hover,
+  &.active {
+    background: v.$activeItem;
+    span {
+      color: v.$txt-primary;
+    }
+  }
+}

@@ -10,7 +10,7 @@ const Servers = () => {
   return (
     <nav className={s.serversNav}>
       <ul>
-        <IconContext.Provider value={{ size: "24px" }}>
+        <IconContext.Provider value={{ size: "26px" }}>
           <ServerLink icon={<BsDiscord />} />
           <hr />
           <ServerLink icon={<HiUserGroup />} />

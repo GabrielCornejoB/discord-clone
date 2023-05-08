@@ -4,8 +4,8 @@
 .link {
   background: v.$background;
   color: v.$green;
-  width: 45px;
-  height: 45px;
+  width: 48px;
+  height: 48px;
   border-radius: 100%;
   @include m.flex(column);
   transition: 0.15s;

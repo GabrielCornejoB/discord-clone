@@ -1,0 +1,29 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.chatsSection {
+  @include m.flex(column);
+  width: 90%;
+  header {
+    width: 100%;
+    @include m.flex(row, space-between);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: v.$txt-secondary;
+    &:hover {
+      color: v.$txt-primary;
+    }
+    span {
+      margin-bottom: 3px;
+    }
+    .plusButton {
+      cursor: pointer;
+    }
+  }
+  ul {
+    width: 100%;
+    margin-top: 10px;
+    @include m.flex(column, flex-start, flex-end);
+    gap: 2.5px;
+  }
+}
