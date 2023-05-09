@@ -1,9 +1,29 @@
 import { ProfileIcon } from "../../ProfileIcon";
 import { IconContext } from "react-icons";
-import { MdMic, MdMicOff, MdHeadset, MdSettings } from "react-icons/md";
+import {
+  MdMic,
+  MdMicOff,
+  MdHeadset,
+  MdHeadsetOff,
+  MdSettings,
+} from "react-icons/md";
 import s from "./UserInfo.module.scss";
+import { useState } from "react";
 
 const UserInfo = () => {
+  const [isMutted, setIsMutted] = useState(false);
+  const [isDeafened, setIsDeafened] = useState(false);
+
+  const handleDeafen = () => {
+    if (!isDeafened) {
+      setIsDeafened(true);
+      setIsMutted(true);
+    } else {
+      setIsDeafened(false);
+      setIsMutted(false);
+    }
+  };
+
   return (
     <section className={s.userTab}>
       <section className={s.userInfo}>
@@ -15,11 +35,14 @@ const UserInfo = () => {
       </section>
       <section className={s.settings}>
         <IconContext.Provider value={{ size: "22px" }}>
-          <div className={s.iconContainer}>
-            <MdMic />
+          <div
+            className={s.iconContainer}
+            onClick={() => setIsMutted(!isMutted)}
+          >
+            {isMutted ? <MdMicOff /> : <MdMic />}
           </div>
-          <div className={s.iconContainer}>
-            <MdHeadset />
+          <div className={s.iconContainer} onClick={handleDeafen}>
+            {isDeafened ? <MdHeadsetOff /> : <MdHeadset />}
           </div>
           <div className={s.iconContainer}>
             <MdSettings />
