@@ -1,16 +1,25 @@
-import { ReactNode } from "react";
 import s from "./Chat.module.scss";
+import { ProfileIcon } from "../../ProfileIcon";
 
 interface Props {
-  icon: ReactNode;
-  name: string;
-  isActive: boolean;
+  name?: string;
+  isActive?: boolean;
+  index: number;
+  handleClick: (index: number) => void;
 }
 
-const Chat = ({ icon, name, isActive }: Props) => {
+const Chat = ({
+  name = "Username",
+  isActive = false,
+  handleClick,
+  index,
+}: Props) => {
   return (
-    <div className={`${s.chat} ${isActive && s.active}`}>
-      <div className={s.pfp}>{icon}</div>
+    <div
+      className={`${s.chat} ${isActive && s.active}`}
+      onClick={() => handleClick(index)}
+    >
+      <ProfileIcon />
       <span>{name}</span>
     </div>
   );

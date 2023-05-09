@@ -1,11 +1,19 @@
 import { IconContext } from "react-icons";
 import { CgMathPlus } from "react-icons/cg";
-import { BsDiscord } from "react-icons/bs";
-
 import s from "./Chats.module.scss";
 import Chat from "./Chat";
+import { useState } from "react";
+
+const initialChats = ["Cornejoooo", "Galhrrera", "Mura", "Chelito"];
+// const colors = ["#2ecc71", "#ff6b6b", "#feca57", "#9b59b6", "#3498db"];
 
 const Chats = () => {
+  const [activeChat, setActiveChat] = useState<number>(0);
+
+  const handleActiveChat = (index: number) => {
+    setActiveChat(index);
+  };
+
   return (
     <section className={s.chatsSection}>
       <header>
@@ -15,12 +23,15 @@ const Chats = () => {
         </IconContext.Provider>
       </header>
       <ul>
-        <IconContext.Provider value={{ size: "20px" }}>
-          <Chat icon={<BsDiscord />} name="User" isActive={true} />
-          <Chat icon={<BsDiscord />} name="User" isActive={false} />
-          <Chat icon={<BsDiscord />} name="User" isActive={false} />
-          <Chat icon={<BsDiscord />} name="User" isActive={false} />
-        </IconContext.Provider>
+        {initialChats.map((user, index) => (
+          <Chat
+            key={index}
+            name={user}
+            index={index}
+            isActive={activeChat == index}
+            handleClick={handleActiveChat}
+          />
+        ))}
       </ul>
     </section>
   );

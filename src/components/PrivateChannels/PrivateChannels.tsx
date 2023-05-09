@@ -1,6 +1,7 @@
 import s from "./PrivateChannels.module.scss";
 import Chats from "./components/Chats";
 import ToggleView from "./components/ToggleView";
+import UserInfo from "./components/UserInfo";
 
 const PrivateChannels = () => {
   return (
@@ -10,6 +11,7 @@ const PrivateChannels = () => {
       </section>
       <ToggleView />
       <Chats />
+      <UserInfo />
     </section>
   );
 };

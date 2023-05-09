@@ -7,6 +7,7 @@
   margin-bottom: 20px;
   gap: 2.5px;
   width: 90%;
+  height: v.$toggleViews-height;
   button {
     @include m.flex(row, flex-start);
     color: v.$txt-secondary;

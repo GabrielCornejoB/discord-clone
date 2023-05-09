@@ -1,0 +1,46 @@
+@use "../../../styles/variables" as v;
+@use "../../../styles/mixins" as m;
+
+.userTab {
+  height: v.$userInfo-height;
+  @include m.flex(row, space-between);
+  background: v.$userInfo;
+  width: 100%;
+  padding: 5px;
+  .userInfo {
+    @include m.flex(row, flex-start);
+    gap: 10px;
+    width: 55%;
+    border-radius: 5px;
+    padding: 2px 0px 2px 5px;
+    cursor: pointer;
+    &:hover {
+      background: v.$activeItem;
+    }
+    .user {
+      @include m.flex(column, center, left);
+      .userName {
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+      .id {
+        font-size: 0.7rem;
+        color: v.$txt-secondary;
+        transform: translateY(-2px);
+      }
+    }
+  }
+  .settings {
+    color: v.$txt-secondary;
+    @include m.flex(row);
+    padding-right: 7.5px;
+    .iconContainer {
+      padding: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        background: v.$activeItem;
+      }
+    }
+  }
+}

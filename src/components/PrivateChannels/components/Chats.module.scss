@@ -2,8 +2,11 @@
 @use "../../../styles/mixins" as m;
 
 .chatsSection {
-  @include m.flex(column);
+  @include m.flex(column, flex-start);
   width: 90%;
+  height: calc(
+    100% - v.$header-height - v.$userInfo-height - v.$toggleViews-height
+  );
   header {
     width: 100%;
     @include m.flex(row, space-between);
