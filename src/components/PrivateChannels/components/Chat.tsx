@@ -19,7 +19,7 @@ const Chat = ({
       className={`${s.chat} ${isActive && s.active}`}
       onClick={() => handleClick(index)}
     >
-      <ProfileIcon />
+      <ProfileIcon color="purple" />
       <span>{name}</span>
     </div>
   );

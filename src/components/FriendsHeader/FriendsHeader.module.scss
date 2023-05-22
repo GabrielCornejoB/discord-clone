@@ -1,0 +1,54 @@
+@use "../../styles/variables" as v;
+
+.header {
+  height: v.$header-height;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: v.$txt-secondary;
+  padding: 0 16px;
+  font-size: 0.9rem;
+  border-bottom: 1.5px solid v.$searchbar;
+
+  .left {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    .friendsTitle {
+      padding-right: 12px;
+      border-right: solid v.$activeItem 2px;
+      color: v.$txt-primary;
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      li {
+        padding: 2px 8px;
+        border-radius: 4px;
+        &:hover,
+        &.active {
+          background: v.$activeItem;
+          color: v.$txt-primary;
+          cursor: pointer;
+        }
+        &:nth-last-child(1) {
+          background: v.$green;
+          color: v.$txt-primary;
+        }
+      }
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    .icon {
+      cursor: pointer;
+      &:hover {
+        color: v.$txt-primary;
+      }
+    }
+  }
+}

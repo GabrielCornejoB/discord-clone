@@ -7,17 +7,10 @@
   height: 100vh;
   width: v.$private-channels-width;
   min-width: v.$private-channels-width;
-  // overflow-y: scroll;
-  // &::-webkit-scrollbar {
-  //   width: 5px;
-  // }
-  // &::-webkit-scrollbar-thumb {
-  //   background: v.$scrollbar;
-  // }
 
   .searchConversation {
     @include m.flex(column);
-    height: v.$header-height;
+    min-height: v.$header-height;
     width: 100%;
     border-bottom: 1.5px solid v.$searchbar;
     button {

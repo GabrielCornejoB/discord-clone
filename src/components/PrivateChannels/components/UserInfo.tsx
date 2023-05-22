@@ -27,7 +27,7 @@ const UserInfo = () => {
   return (
     <section className={s.userTab}>
       <section className={s.userInfo}>
-        <ProfileIcon />
+        <ProfileIcon color="green" />
         <div className={s.user}>
           <span className={s.userName}>GabrielCB</span>
           <span className={s.id}>#2173</span>
