@@ -1,7 +1,32 @@
 @use "../../styles/variables" as v;
 
 .activeNow {
-  background: blue;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   height: 100%;
   width: v.$active-now-width;
+  border-left: 1.5px solid v.$activeItem;
+  padding: 16px;
+  h1 {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+    text-align: center;
+    border-radius: 12px;
+    background: v.$friendsBar;
+    h2 {
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    p {
+      color: v.$txt-secondary;
+      font-size: 0.8rem;
+    }
+  }
 }
