@@ -1,4 +1,6 @@
+import s from "./ActiveNow.module.scss";
+
 const ActiveNow = () => {
-  return <aside>ActiveNow</aside>;
+  return <aside className={s.activeNow}>ActiveNow</aside>;
 };
 export default ActiveNow;

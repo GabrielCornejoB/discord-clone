@@ -1,0 +1,24 @@
+@use "../../styles/variables" as v;
+
+.onlineFriends {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  width: calc(100% - v.$active-now-width);
+  padding: 16px 28px;
+  .searchBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: v.$searchbar;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    input {
+      margin-bottom: 2px;
+      flex-grow: 1;
+    }
+  }
+}
