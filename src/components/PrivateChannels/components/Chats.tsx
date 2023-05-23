@@ -4,7 +4,6 @@ import s from "./Chats.module.scss";
 import Chat from "./Chat";
 import { useState } from "react";
 
-const initialChats = ["Cornejoooo", "Galhrrera", "Mura", "Chelito"];
 // const colors = ["#2ecc71", "#ff6b6b", "#feca57", "#9b59b6", "#3498db"];
 
 const Chats = () => {
@@ -23,15 +22,34 @@ const Chats = () => {
         </IconContext.Provider>
       </header>
       <ul>
-        {initialChats.map((user, index) => (
-          <Chat
-            key={index}
-            name={user}
-            index={index}
-            isActive={activeChat == index}
-            handleClick={handleActiveChat}
-          />
-        ))}
+        <Chat
+          name="Cornejoooo"
+          index={0}
+          isActive={activeChat == 0}
+          handleClick={handleActiveChat}
+          color="purple"
+        />
+        <Chat
+          name="Galhrrera"
+          index={1}
+          isActive={activeChat == 1}
+          handleClick={handleActiveChat}
+          color="purple"
+        />
+        <Chat
+          name="Mura"
+          index={2}
+          isActive={activeChat == 2}
+          handleClick={handleActiveChat}
+          color="green"
+        />
+        <Chat
+          name="Chelito"
+          index={3}
+          isActive={activeChat == 3}
+          handleClick={handleActiveChat}
+          color="green"
+        />
       </ul>
     </section>
   );

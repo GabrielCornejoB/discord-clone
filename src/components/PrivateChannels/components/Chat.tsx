@@ -6,6 +6,7 @@ interface Props {
   isActive?: boolean;
   index: number;
   handleClick: (index: number) => void;
+  color: "green" | "purple";
 }
 
 const Chat = ({
@@ -13,13 +14,14 @@ const Chat = ({
   isActive = false,
   handleClick,
   index,
+  color,
 }: Props) => {
   return (
     <div
       className={`${s.chat} ${isActive && s.active}`}
       onClick={() => handleClick(index)}
     >
-      <ProfileIcon color="purple" />
+      <ProfileIcon color={color} />
       <span>{name}</span>
     </div>
   );

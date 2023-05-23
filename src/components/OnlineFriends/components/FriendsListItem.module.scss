@@ -1,0 +1,53 @@
+@use "../../../styles/variables" as v;
+
+.listItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1.5px solid v.$activeItem;
+  padding: 8px;
+  cursor: pointer;
+  &:hover {
+    background: v.$activeItem;
+  }
+  .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    .profileInfo {
+      display: flex;
+      flex-direction: column;
+      h3 {
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+      span {
+        font-size: 0.75rem;
+        color: v.$txt-secondary;
+        font-weight: 500;
+      }
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    height: 100%;
+    .icon {
+      $dimensions: 36px;
+      display: grid;
+      place-items: center;
+      background: v.$friendsBar;
+      color: v.$txt-secondary;
+      height: $dimensions;
+      width: $dimensions;
+      font-size: 1.1rem;
+      border-radius: 50%;
+      &:hover {
+        color: v.$txt-primary;
+      }
+    }
+  }
+}
