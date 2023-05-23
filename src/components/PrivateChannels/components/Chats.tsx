@@ -34,7 +34,7 @@ const Chats = () => {
           index={1}
           isActive={activeChat == 1}
           handleClick={handleActiveChat}
-          color="purple"
+          color="orange"
         />
         <Chat
           name="Mura"
@@ -48,7 +48,7 @@ const Chats = () => {
           index={3}
           isActive={activeChat == 3}
           handleClick={handleActiveChat}
-          color="green"
+          color="yellow"
         />
       </ul>
     </section>

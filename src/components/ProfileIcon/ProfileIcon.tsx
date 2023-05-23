@@ -3,13 +3,15 @@ import { BsDiscord } from "react-icons/bs";
 import s from "./ProfileIcon.module.scss";
 
 interface Props {
-  color: "green" | "purple";
+  color: "green" | "purple" | "orange" | "yellow";
 }
 
 const ProfileIcon = ({ color }: Props) => {
   enum colors {
     "green" = "#20bf6b",
     "purple" = "#9b59b6",
+    "orange" = "#ff6b6b",
+    "yellow" = "#feca57",
   }
 
   return (

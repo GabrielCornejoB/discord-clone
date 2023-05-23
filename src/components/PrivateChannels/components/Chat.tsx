@@ -6,7 +6,7 @@ interface Props {
   isActive?: boolean;
   index: number;
   handleClick: (index: number) => void;
-  color: "green" | "purple";
+  color: "green" | "purple" | "orange" | "yellow";
 }
 
 const Chat = ({
